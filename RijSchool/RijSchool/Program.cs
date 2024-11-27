@@ -25,7 +25,7 @@
                 automaat = false,
                 kenteken = "KU786G",
                 kilometerStand = 65739,
-                merk = "volvo
+                merk = "volvo",
 
             };
             RijLeraar rijLeraar = new RijLeraar()
@@ -48,15 +48,35 @@
                 urenVerbruikt = 25,
 
             };
-            Student student = new Student() 
-            { 
+            RijTest rijTest = new RijTest()
+            {
+                afnameDatum = DateTime.Now,
+                gehaald = true,
+
+            };
+
+            TheorieTest theorieTest = new TheorieTest()
+            {
+
+            };
+            Student student1 = new Student()
+            {
                 LesPakket = lesPakket,
-                TheorieTest = TheorieTest,
-                RijTest = RijTest,
+                TheorieTest = theorieTest,
+                RijsTest = rijTest,
                 RijLeraar = rijLeraar,
                 leeftijd = 35,
                 naam = "Bib"
-            }
+            };
+            Student student2 = new Student()
+            {
+                LesPakket = lesPakket,
+                TheorieTest = theorieTest,
+                RijsTest = rijTest,
+                RijLeraar = rijLeraar,
+                leeftijd = 33,
+                naam = "Bub"
+            };
                 
         }
     }
