@@ -13,4 +13,5 @@ namespace RijSchool
         internal string kenteken;
         internal int kilometerStand;
     }
+
 }
