@@ -8,5 +8,11 @@ namespace RijSchool
 {
     internal class Student
     {
+        internal string naam;
+        internal int leeftijd;
+        internal LesPakket LesPakket;
+        internal RijLeraar RijLeraar;
+        internal TheorieTest TheorieTest;
+        internal RijTest RijsTest; 
     }
 }
