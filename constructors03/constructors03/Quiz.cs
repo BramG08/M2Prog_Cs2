@@ -13,6 +13,11 @@
         {
             vragen[index] = vraag;
         }
+        internal void StelVraag(int index)
+        {
+            QuizVraag vraag = vragen[index];
+            QuizVraagAntwoord antwoord = ingevuldeAntwoorden[index];
+        }
     }
    
 }
