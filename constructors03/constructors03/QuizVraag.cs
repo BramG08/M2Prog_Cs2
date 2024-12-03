@@ -10,16 +10,11 @@ namespace constructors03
     {
         internal string vraag;
         internal string antwoord;
-    }
-    internal QuizVraag(string vraag, string antwoord)
-    {
-        this.vraag = vraag;
-        this.antwoord = antwoord;
-    }
 
-    class Quiz
-    {
-        internal QuizVraag[] vragen;
-        internal QuizVraagAntwoord[] IngevuldeAntwoorden;
+        internal QuizVraag(string vraag, string antwoord)
+        {
+            this.vraag = vraag;
+            this.antwoord = antwoord;
+        }
     }
 }

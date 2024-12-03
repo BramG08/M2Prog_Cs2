@@ -11,19 +11,8 @@ namespace constructors03
         }
         internal void Run()
         {
-            private void Run() 
-            {
-                QuizVraag quizvraah = new QuizVraag("hier komt de vraag, hier komt het antwoord");
-            }
-
-
-
-
-
-
-
-
+            QuizVraag quizvraah = new QuizVraag("hier komt de vraag", "hier komt het antwoord");
 
         }
-
-    };
+    }
+}
