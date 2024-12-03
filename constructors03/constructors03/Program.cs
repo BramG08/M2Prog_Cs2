@@ -4,6 +4,7 @@ namespace constructors03
 {
     internal class Program
     {
+        Quiz Quiz = new Quiz(10);
         static void Main(string[] args)
         {
             Program program = new Program();
@@ -11,8 +12,23 @@ namespace constructors03
         }
         internal void Run()
         {
-            QuizVraag quizvraah = new QuizVraag("hier komt de vraag", "hier komt het antwoord");
-
+            QuizVraagToeOpIndex(0, "vraag", "antwoord");
+            QuizVraagToeOpIndex(1, "vraag", "antwoord");
+            QuizVraagToeOpIndex(2, "vraag", "antwoord");
+            QuizVraagToeOpIndex(3, "vraag", "antwoord");
+            QuizVraagToeOpIndex(4, "vraag", "antwoord");
+            QuizVraagToeOpIndex(5, "vraag", "antwoord");
+            QuizVraagToeOpIndex(6, "vraag", "antwoord");
+            QuizVraagToeOpIndex(7, "vraag", "antwoord");
+            QuizVraagToeOpIndex(8, "vraag", "antwoord");
+            QuizVraagToeOpIndex(9, "vraag", "antwoord");
         }
+        internal void QuizVraagToeOpIndex(int index, string vraag, string antwoord)
+        {
+            QuizVraag quizVraag = new QuizVraag(vraag, antwoord);
+            Quiz.VoegVraagToeOpIndex(index, quizVraag);
+        }
+            
+}
     }
 }

@@ -9,6 +9,10 @@
             vragen = new QuizVraag[aantalVragen];
             ingevuldeAntwoorden = new QuizVraagAntwoord[aantalVragen];
         }
+        internal void VoegVraagToeOpIndex(int index, QuizVraag vraag)
+        {
+            vragen[index] = vraag;
+        }
     }
    
 }
