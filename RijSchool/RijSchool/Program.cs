@@ -11,6 +11,9 @@
         internal void Run()
         {
 
+            
+         
+
             Auto auto1 = new Auto()
             {
                 automaat = true,
@@ -40,6 +43,14 @@
                 rijLeraar = rijLeraar,
 
                 tijd = 1130
+            };
+
+            LesUur lesUur1 = new LesUur()
+            {
+                auto = auto2,
+                rijLeraar = rijLeraar,
+
+                tijd = 1000
             };
 
             LesPakket lesPakket = new LesPakket()
@@ -77,7 +88,18 @@
                 leeftijd = 33,
                 naam = "Bub"
             };
-                
+
+            Student[] students = new Student[] { student1, student2 };
+            LesUur[] lesUurs = new LesUur[] { lesUur, lesUur1 };
+
+            Dag dag = new Dag()
+            {
+                datum = DateTime.Now,
+                lesuren = lesUurs,
+
+            };
+
+
         }
     }
 }
