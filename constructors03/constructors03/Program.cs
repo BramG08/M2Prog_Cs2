@@ -22,13 +22,21 @@ namespace constructors03
             QuizVraagToeOpIndex(7, "vraag", "antwoord");
             QuizVraagToeOpIndex(8, "vraag", "antwoord");
             QuizVraagToeOpIndex(9, "vraag", "antwoord");
+
+            for (int i = 0; i < Quiz.vragen.Length; i++)
+            {
+                Quiz.StelVraag(i);
+                Console.WriteLine("Je score is: " + Quiz.GetScore().ToString());
+            }
+
         }
+
+
         internal void QuizVraagToeOpIndex(int index, string vraag, string antwoord)
         {
             QuizVraag quizVraag = new QuizVraag(vraag, antwoord);
             Quiz.VoegVraagToeOpIndex(index, quizVraag);
         }
             
-}
     }
 }
