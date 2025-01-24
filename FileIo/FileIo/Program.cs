@@ -9,7 +9,18 @@
         }
         internal void Run()
         {
+            string[] lines = File.ReadAllLines("quiz.txt");
 
+            for (int i = 0; i < lines.Length; i++) 
+            {
+                Console.WriteLine($"{i} {lines[i]}");
+            }
+            string[] lines2 = File.ReadAllLines("amerika.txt");
+
+            for (int i = 0;i < lines2.Length;i++)
+            {
+                Console.WriteLine($"{i} {lines2[i]}");
+            }
         }
     }
 }
