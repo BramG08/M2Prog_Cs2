@@ -9,36 +9,42 @@ namespace ProductenLaden
         {
             Program program = new Program();
             program.Run();
-        }
-        static void RunProducten(string[] args)
-        {
-            Program program = new Program();
             program.RunProducten();
+            program.Elmo();
         }
+     
         internal void RunProducten() 
         {
             string text = File.ReadAllText("Producten.json");
             Product[] product = JsonSerializer.Deserialize<Product[]>(text);
-          
-            Console.WriteLine(product);
 
             for (int i = 0; i < product.Length; i++) 
             {
-                Console.WriteLine(product[i]);
+                Console.WriteLine(product[i].Name);
+                Console.WriteLine(product[i].Description);
+                Console.WriteLine(product[i].Price);
             }
     
+        }
+
+        internal void Elmo() 
+        {
+            string text = File.ReadAllText("elmo.json");
+            elmo[] elmo = JsonSerializer.Deserialize<elmo[]>(text);
+
+            
+            for (int i = 0; i < elmo.Length; i++)
+            {
+                Console.WriteLine(elmo[i].Friend);
+                Console.WriteLine(elmo[i].DickSize);
+                Console.WriteLine(elmo[i].Price);
+            }
         }
         internal void Run()
         {
             string text = File.ReadAllText("Product.json");
             Product product = JsonSerializer.Deserialize<Product>(text);
 
-            Console.WriteLine(product.Name);
-            Console.WriteLine(product.Description);
-            Console.WriteLine(product.Price);
-
-
-           
         }
     }
 }
